@@ -40,6 +40,10 @@ public class Nurseries {
     @Column(columnDefinition = "varchar(30) not null")
     private String typeOfPlants;
 
+    @NotEmpty(message = "commercialRegisterNo should not be Empty!")
+    @Column(columnDefinition = "varchar(50) not null unique")
+    private String commercialRegisterNo;
+
     @Column(columnDefinition = "datetime default (current_timestamp)")
     private LocalDate registration_date;
 
