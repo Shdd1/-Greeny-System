@@ -56,6 +56,9 @@ public class ConsultantService {
     public void confirmConsultationSchedule(Integer consultationId,Integer consultantId,String status) {
         Consultation consultation = consultationRepository.findConsultationById(consultationId);
         Consultant consultant=consultantRepository.findConsultantById(consultantId);
+        if (!consultation.getConsultant().equals(consultant)) {
+            throw new ApiException("consultant or consultation not found ");
+        }
         if(consultation==null) {
             throw new ApiException("Consultation not found");
         }
@@ -79,6 +82,9 @@ public class ConsultantService {
     public void consultantConfirmed(Integer id,Integer bookingId ){
         Consultant consultant=consultantRepository.findConsultantById(id);
         Consultation consultation=consultationRepository.findConsultationById(bookingId);
+         if (!consultation.getConsultant().equals(consultant)) {
+            throw new ApiException("consultant or consultation not found ");
+        }
         if(consultant==null || consultation==null) {
             throw new ApiException("consultant or consultation not found");
         }
@@ -103,7 +109,10 @@ public class ConsultantService {
     public void canceledStatusOfConsultation(Integer consultantId,Integer consultationId){
       Consultant consultant=consultantRepository.findConsultantById(consultantId);
       Consultation consultation=consultationRepository.findConsultationById(consultationId);
-      if(consultant==null||consultation==null){
+       if (!consultation.getConsultant().equals(consultant)) {
+            throw new ApiException("consultant or consultation not found ");
+        }
+        if(consultant==null||consultation==null){
           throw new ApiException("consultant or consultation not found");
       }
       if(consultation.getStatus().equalsIgnoreCase("Canceled")){
