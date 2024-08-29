@@ -45,6 +45,10 @@ private String password;
 @Column(columnDefinition = "varchar(50) not null")
 private String specialization;
 
+  @NotEmpty(message = "licenseNumber should not be Empty!")
+ @Column(columnDefinition = "varchar(50) not null")
+ private String licenseNumber;
+
 //yearsOfExperience: int
 @NotEmpty(message = "Years Of Experience should not be Empty!")
 @Column(columnDefinition = "varchar(50) not null")
