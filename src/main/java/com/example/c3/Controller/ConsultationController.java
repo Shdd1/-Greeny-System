@@ -50,7 +50,7 @@ public class ConsultationController {
     ////////////////////
     @PutMapping("/canceled/user_id/{userId}/con_id/{conId}")
      public ResponseEntity canceledStatusOfConsultation(@PathVariable Integer userId,@PathVariable Integer conId){
-        consultationService.canceledStatusOfConsultation(userId,conId);
+        consultationService.UsercanceledStatusOfConsultation(userId,conId);
         return ResponseEntity.status(200).body(new ApiResponse("user canceled"));
      }
 
