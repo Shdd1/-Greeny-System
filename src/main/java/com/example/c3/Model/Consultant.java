@@ -46,7 +46,7 @@ private String password;
 private String specialization;
 
   @NotEmpty(message = "licenseNumber should not be Empty!")
- @Column(columnDefinition = "varchar(50) not null")
+ @Column(columnDefinition = "varchar(50) unique")
  private String licenseNumber;
 
 //yearsOfExperience: int
