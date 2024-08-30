@@ -113,7 +113,7 @@ public class ConsultantService {
     }
 
     //3:Consultant Cancel consultation
-    public void canceledStatusOfConsultation(Integer consultantId,Integer consultationId){
+    public void ConsultantcanceledStatusOfConsultation(Integer consultantId,Integer consultationId){
         LocalDate currentDate = LocalDate.now();
       Consultant consultant=consultantRepository.findConsultantById(consultantId);
       Consultation consultation=consultationRepository.findConsultationById(consultationId);
