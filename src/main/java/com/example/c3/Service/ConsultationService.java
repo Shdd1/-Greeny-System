@@ -128,8 +128,8 @@ public class ConsultationService {
     consultationRepository.save(consultation);
 }
 
-//edit done
-public void canceledStatusOfConsultation(Integer userId, Integer conId) {
+
+public void UsercanceledStatusOfConsultation(Integer userId, Integer conId) {
     LocalDate currentDate = LocalDate.now();
 
 
