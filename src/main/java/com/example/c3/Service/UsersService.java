@@ -75,9 +75,15 @@ private final NurseriesRepository nurseriesRepository;
     public void userConfirmed(Integer id, Integer bookingId) {
         Users users = usersRepository.findUsersById(id);
         Consultation consultation = consultationRepository.findConsultationById(bookingId);
+
         if (users == null || consultation == null) {
             throw new ApiException("User or consultation not found");
         }
+
+        if(!consultation.getUsers().equals(users)){
+            throw new ApiException("User has no consultation") ;
+        }
+
         if (consultation.getStatus().equalsIgnoreCase("completed")) {
             throw new ApiException("It is finished.");
         }
