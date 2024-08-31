@@ -1,0 +1,87 @@
+
+Shahad:
+
+- User
+- ⁠Plan 
+- ⁠Tools
+- ⁠Review 
+Model, Repository, Service And Controller
+
+Endpoints:
+
+- Consultant Service:
+1.confirmConsultationSchedule   
+2.consultantConfirmed        
+3.ConsultantcanceledStatusOfConsultation 
+  
+- Consultation Service:
+4.addNewConsultation
+5.ChangeStatusToCompleted 
+6.extendConsultationDuration 
+7.UsercanceledStatusOfConsultation  
+
+- Users Service:
+8.userConfirmed
+9.assignPlanToUser
+
+- Plan Service:
+10.addPlans
+
+
+Fahad:
+
+- Farmers
+- Plants
+- Nurseries
+Model, Repository, Service And Controller
+
+- Farmers Service:
+11.getFarmersByLocation
+
+- Gardening Tools Service:
+12.assignToolsToOrders
+
+- Orders Service:
+13.addOrder
+14.applyDiscountToOrder
+
+- Plans Service: 
+15.getPlansByConsultantSpecialization
+
+- Plants Service:
+16.getMostPopularPlant
+
+
+- Reviews Service:
+17.assignOrderToReview
+18.getAllReviewsForOrder
+19.getAllReviewsByRating
+
+- Users Service:
+20.getPlanRecommendationByPlantName
+21.getNurseriesByLocation
+
+
+Reema:
+
+- ⁠Consultation 
+- ⁠Consultant 
+- ⁠Orders
+Model, Repository, Service And Controller
+
+- Nurseries Service:
+22.addNurseries
+23.getListOfPlantsToNurseries
+24.getNurseriesWithAvailablePlantStock
+
+- Plants Service:
+25.lightRequirements
+26.waterRequirements
+27.temperatureRequirements
+28.soilTypeRequirements
+29.plantingSeason
+30.growthTime
+31.getAllPlantsByCategory
+
+- Users Service:
+32.getAllNurseries
